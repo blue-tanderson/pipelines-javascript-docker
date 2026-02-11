@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: bluetandersonpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bluetandersonpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: bluetandersonpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: bluetandersonpipelinesjavascriptdocker 
+          image: appstestcr001.azurecr.io/bluetandersonpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
